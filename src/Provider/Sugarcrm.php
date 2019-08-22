@@ -114,7 +114,7 @@ class Sugarcrm extends AbstractProvider
      *
      * @param object $response
      * @param AccessToken $token
-     * @return MailchimpResourceOwner
+     * @return SugarcrmResourceOwner
      */
     protected function createResourceOwner(array $response, AccessToken $token)
     {

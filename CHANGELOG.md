@@ -1,5 +1,5 @@
 # Changelog
-All Notable changes to `oauth2-mailchimp` will be documented in this file
+All Notable changes to `oauth2-sugarcrm7` will be documented in this file
 
 ## 0.1.0 - 2019-02-21
 

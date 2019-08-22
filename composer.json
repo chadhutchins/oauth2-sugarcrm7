@@ -1,6 +1,6 @@
 {
-    "name": "chadhutchins/oauth2-mailchimp",
-    "description": "Mailchimp OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+    "name": "chadhutchins/oauth2-sugarcrm7",
+    "description": "SugarCRM OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +15,7 @@
         "client",
         "authorization",
         "authorisation",
-        "mailchimp"
+        "sugarcrm"
     ],
     "require": {
         "league/oauth2-client": "^2.0"

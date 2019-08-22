@@ -5,7 +5,7 @@ namespace Chadhutchins\OAuth2\Client\Test\Provider;
 use League\OAuth2\Client\Tool\QueryBuilderTrait;
 use Mockery as m;
 
-class MailchimpTest extends \PHPUnit_Framework_TestCase
+class SugarcrmTest extends \PHPUnit_Framework_TestCase
 {
     use QueryBuilderTrait;
 
@@ -13,7 +13,7 @@ class MailchimpTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->provider = new \Chadhutchins\OAuth2\Client\Provider\Mailchimp([
+        $this->provider = new \Chadhutchins\OAuth2\Client\Provider\Sugarcrm([
             'clientId' => 'mock_client_id',
             'clientSecret' => 'mock_secret',
             'redirectUri' => 'none',
@@ -56,7 +56,7 @@ class MailchimpTest extends \PHPUnit_Framework_TestCase
         $url = $this->provider->getAuthorizationUrl();
         $uri = parse_url($url);
 
-        $this->assertEquals('login.mailchimp.com', $uri['host']);
+        $this->assertEquals('login.sugarcrm.com', $uri['host']);
         $this->assertEquals('oauth2/authorize', $uri['path']);
     }
 
@@ -67,7 +67,7 @@ class MailchimpTest extends \PHPUnit_Framework_TestCase
         $url = $this->provider->getBaseAccessTokenUrl($params);
         $uri = parse_url($url);
 
-        $this->assertEquals('login.mailchimp.com', $uri['host']);
+        $this->assertEquals('login.sugarcrm.com', $uri['host']);
         $this->assertEquals('/oauth2/token', $uri['path']);
     }
 
