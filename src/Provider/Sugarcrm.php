@@ -12,6 +12,8 @@ class Sugarcrm extends AbstractProvider
 {
     use BearerAuthorizationTrait;
 
+    protected $url;
+
     /**
      * @var string Key used in a token response to identify the resource owner.
      */
@@ -40,7 +42,7 @@ class Sugarcrm extends AbstractProvider
      */
     public function getBaseAuthorizationUrl()
     {
-        return $this->url . '/oauth2/authorize';
+        return $this->url . '/rest/v11/oauth2/authorize';
     }
 
     /**
@@ -50,7 +52,7 @@ class Sugarcrm extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return $this->url . '/oauth2/token';
+        return $this->url . '/rest/v11/oauth2/token';
     }
 
     /**
@@ -62,7 +64,7 @@ class Sugarcrm extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return $this->url . '/metadata';
+        return $this->url . '/rest/v11/metadata';
     }
 
     /**
